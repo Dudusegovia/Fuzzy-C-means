@@ -77,11 +77,11 @@ def K_FUZZY(dataf, num_clusters, rodadas_max=100):
 
 
 # data deve conter seu dataframe de dados já tratados
-data = pd.read_csv("dados.csv")
+data = pd.read_excel("NAZEMI.xlsx")
 
 
 if __name__ == "__main__":
-    K_FUZZY(dataf=data, num_clusters=10, rodadas_max=100) # A função retorna um dataframe atualizado com a coluna 'cluster' adicionada
+    K_FUZZY(dataf=data, num_clusters=10, rodadas_max=100).to_excel("resultado.xlsx", index=False) # A função retorna um dataframe atualizado com a coluna 'cluster' adicionada
 
 
 
